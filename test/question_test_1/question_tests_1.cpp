@@ -6,7 +6,15 @@ TEST_CASE("Verify Test Configuration", "verification") {
 	REQUIRE(true == true);
 }
 
-TEST_CASE("test")
+TEST_CASE("test1 seconds since 1970")
 {
-	REQUIRE(test_config() == true);
+	int test1 = 1570846218;
+	REQUIRE(get_hours(test1) == 2);
+	REQUIRE(get_minutes(test1) == 10);
+	REQUIRE(get_seconds(test1) == 18);
+
+	int test2 = 1570875018;
+	REQUIRE(get_hours(test2) == 10);
+	REQUIRE(get_minutes(test2) == 10);
+	REQUIRE(get_seconds(test2) == 18);
 }
